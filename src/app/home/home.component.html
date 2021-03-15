@@ -1,0 +1,19 @@
+<div class="content">
+  <div class="container">
+    <div class="row" *ngFor="let post of posts | async">
+      <div class="blogpost">
+        <h3><a style="color:purple" href="/post/{{post.id}}" class="blog-title">{{post.title}}</a></h3>
+        <div>
+          <i class="fas fa-user"></i> Author: <p>{{post.username}}</p>
+        </div>
+        <p [innerHTML]="post.content"></p>
+        <div>
+         
+          <button class="btn btn-primary" type="submit"><a style="color:white" type="button" href="/post/{{post.id}}" class="read-more btn btn-default">Bid Now</a></button>
+        </div>
+        <hr>
+      </div>
+      <hr>
+    </div>
+  </div>
+</div>
